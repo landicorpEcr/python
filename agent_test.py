@@ -48,7 +48,7 @@ def printIP(ip):
 
 
 # 保存数据到txt文本
-def text_save(content, filename, mode='a'):
+def text_save(content, filename, mode='w'):
     # 首先创建并打开一个空文件
     file = open(filename, mode)
     # 循环解析数据内容
