@@ -8,9 +8,9 @@ import bs4
 
 
 # 从代理网站获取代理IP
-def get_ip():
+def get_ip(n):
     # 定义http请求地址
-    url = "http://www.xicidaili.com/nn"
+    url = "http://www.xicidaili.com/nn/" + str(n)
     # 定义http请求头
     headers = {"Accecpt": "text/html,application/xhtml+xml,application/xml",
                "Accept-Language": "zh-CN,zh;q=0.8,en;q=0.6",
@@ -59,5 +59,15 @@ def text_save(content, filename, mode='a'):
     file.close()
 
 
-a1 = get_ip()
-text_save(a1, 'ip地址集合.txt')
+def getAll(num):
+    # 定义一个空的list
+    allText = []
+    # 循环将各页得到的list数据累加起来
+    for i in range(num):
+        allText = allText + get_ip(i + 1)
+    # 将数据用txt写出来
+    text_save(allText, 'ip地址集合.txt')
+
+
+# 执行获取多少页以内数据的函数
+getAll(20)
