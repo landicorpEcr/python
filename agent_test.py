@@ -40,7 +40,7 @@ def get_ip(n):
     return [":".join(i) for i in zip(ip, port)]
 
 
-# 打印代理IP，这是console打印，并不是写文件（不是论文代码要求）。
+# 打印代理IP，这是console打印，并不是写文件。
 def printIP(ip):
     myip = ip
     for ips in myip:
