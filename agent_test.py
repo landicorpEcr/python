@@ -10,7 +10,8 @@ import bs4
 # 从代理网站获取代理IP
 def get_ip(n):
     # 定义http请求地址
-    url = "http://www.xicidaili.com/nn/" + str(n)
+    # url = "http://www.xicidaili.com/nn/" + str(n)
+    url = "http://www.xicidaili.com/wn/" + str(n)
     # 定义http请求头
     headers = {"Accecpt": "text/html,application/xhtml+xml,application/xml",
                "Accept-Language": "zh-CN,zh;q=0.8,en;q=0.6",
@@ -55,7 +56,7 @@ def text_save(content, filename, mode='w'):
     for i in range(len(content)):
         # 写入字符串型文件内容
         file.write(str(content[i]) + '\n')
-        # 关闭文件
+    # 关闭文件
     file.close()
 
 
