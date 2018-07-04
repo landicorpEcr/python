@@ -38,7 +38,7 @@ def listdir(srcfile, dstfile):
                 mycopyfile(filepath, dstfile + line)
 
 
-srcfile = 'F:/迅雷下载/somebody@草榴社区@66部无码汉化漫画'
+srcfile = 'F:/迅雷下载'
 # srcfile = 'D:/360极速浏览器下载'
 dstfile = 'H:/漫画/'
 
